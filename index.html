@@ -2,11 +2,16 @@
 <html lang="pl">
   <head>
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <title>IceCream</title>
   </head>
 
@@ -14,10 +19,11 @@
     <section class="gallery">
       <div class="gallery-photo"></div>
 
-      <div class="swiper-container">
+      <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img class="customer-reviews-customer"
+            <img
+              class="customer-reviews-customer"
               src="./images/slider-pic-1.jpg"
               alt="a lady with long black hair"
             />
@@ -30,9 +36,9 @@
             </div>
             <h1 class="customer-reviews-name">Emily, Los Angeles</h1>
           </div>
-
           <div class="swiper-slide">
-            <img class="customer-reviews-customer"
+            <img
+              class="customer-reviews-customer"
               src="./images/slider-pic-2.jpg"
               alt="a man with a pink cap"
             />
@@ -44,9 +50,9 @@
             </div>
             <h1 class="customer-reviews-name">Bryan, New-York</h1>
           </div>
-
           <div class="swiper-slide">
-            <img class="customer-reviews-customer"
+            <img
+              class="customer-reviews-customer"
               src="./images/slider-pic-3.jpg"
               alt="a lady with a glasses"
             />
@@ -59,29 +65,12 @@
             </div>
             <h1 class="customer-reviews-name">Diana, Chicago</h1>
           </div>
+          ...
         </div>
-
         <div class="swiper-pagination"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  </body>
 </html>
-
-
-
-
-

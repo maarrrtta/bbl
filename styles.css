@@ -13,12 +13,13 @@ body {
     background-image: url('../images/background-mobile.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
-    height: 100%;    
+    background-size: cover;
+    height: 100%;
 }
 
 .gallery-photo {
-        margin-top: -32px;
+    position: relative;
+    top: -32px;
         display: flex;
         justify-content: center;
         margin-left: auto;
@@ -102,20 +103,35 @@ body {
         position: relative;
 }
 
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
 .swiper-pagination-bullet {
-    position: relative;
-    bottom: -132px;
-    display: inline-block;
     width: 12px;
         height: 12px;
         background-color: var(--color-inactive-slider);
-        margin: 0 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--color-background);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 12px;
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
 
+    .gallery {
+        height: 100%;
+    }
 
-    .gallery-photo {
+.gallery-photo {
         width: 440px;
         height: 204px;
     }
@@ -137,10 +153,6 @@ body {
                 background-image: url(../images/slider-1-mobile.jpg);
             }
         }
-
-    .swiper-pagination-bullet {
-            bottom: -214px;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -150,7 +162,8 @@ body {
     }
 
     .gallery-photo {
-            margin-top: -144px;
+            position: relative;
+                top: -144px;
             width: 704px;
                 height: 327px;
                 border-radius: 18px;
@@ -199,19 +212,24 @@ body {
         font-size: 16px;
     }
 
-    .slideshow-pagination {
-        margin-top: 32px;
-    }
+                .swiper-horizontal>.swiper-pagination-bullets,
+                .swiper-pagination-bullets.swiper-pagination-horizontal,
+                .swiper-pagination-custom,
+                .swiper-pagination-fraction {
+                    bottom: 32px;
+                }
 }
 
 @media (min-width: 1200px) {
 
     .gallery {
         background-image: url('../images/background-desktop.jpg');
+        height: 1097px;
     }
 
     .gallery-photo {
-        margin-top: -98px;
+        position: relative;
+            top: -98px;
             width: 1013px;
                 height: 422px;
             border-radius: 24px;
@@ -254,12 +272,10 @@ body {
             font-size: 16px;
         }
 
-        .slideshow-pagination {
-            margin-top: 32px;
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: 32px;
         }
-
-        .swiper-pagination-bullet {
-            bottom: -190px;
-                }
-
 }
